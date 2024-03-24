@@ -5,14 +5,14 @@
         static void Main()
         {
             int[] tablicaLiczb = { 5, 10, 15, 20, 25 };
-            double srednia = ObliczSrednia(tablicaLiczb);
+            double srednia = PoliczSrednia(tablicaLiczb);
             Console.WriteLine("Średnia: " + srednia);
 
             int maksymalnaWartosc = ZnajdzMaksymalnaWartosc(tablicaLiczb);
             Console.WriteLine("Maksymalna wartość: " + maksymalnaWartosc);
         }
 
-        static double ObliczSrednia(int[] tablica)
+        static double PoliczSrednia(int[] tablica)
         {
             if (tablica == null || tablica.Length == 0)
             {
