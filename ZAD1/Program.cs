@@ -7,6 +7,9 @@
             int[] tablicaLiczb = { 5, 10, 15, 20, 25 };
             double srednia = ObliczSrednia(tablicaLiczb);
             Console.WriteLine("Średnia: " + srednia);
+
+            int maksymalnaWartosc = ZnajdzMaksymalnaWartosc(tablicaLiczb);
+            Console.WriteLine("Maksymalna wartość: " + maksymalnaWartosc);
         }
 
         static double ObliczSrednia(int[] tablica)
@@ -23,6 +26,25 @@
             }
 
             return (double)suma / tablica.Length;
+        }
+
+        static int ZnajdzMaksymalnaWartosc(int[] tablica)
+        {
+            if (tablica == null || tablica.Length == 0)
+            {
+                throw new ArgumentException("Tablica jest pusta lub null.");
+            }
+
+            int maksymalnaWartosc = tablica[0];
+            foreach (int liczba in tablica)
+            {
+                if (liczba > maksymalnaWartosc)
+                {
+                    maksymalnaWartosc = liczba;
+                }
+            }
+
+            return maksymalnaWartosc;
         }
     }
 }
