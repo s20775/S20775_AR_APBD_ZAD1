@@ -7,6 +7,7 @@
             Console.WriteLine("Hello, World!");
             int liczba = 10;
             string name = "Artur";
+            float wzrost = 1.78f;
         }
     }
 }
